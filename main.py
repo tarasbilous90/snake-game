@@ -151,9 +151,6 @@ class Snake:
                     elif self.snake_parts_rect[-i][2] == -90 and self.snake_parts_rect[-i + 1][2] == 0 or \
                             self.snake_parts_rect[-i][2] == 180 and self.snake_parts_rect[-i + 1][2] == 90:
                         self.snake_sprites[i - 1].image = self.snake_body_top_left_img
-            else:
-                self.snake_sprites[i - 1].rect.x = self.snake_parts_rect[-i + -1][0]
-                self.snake_sprites[i - 1].rect.y = self.snake_parts_rect[-i + -1][1]
 
     def collision_check(self):
         for i in range(2, len(self.snake_sprites) + 1):
